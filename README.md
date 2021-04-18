@@ -6,10 +6,12 @@ The term mutex comes from the words "mutually exclusive." A mutex is a synchroni
 
 Using a mutex is relatively straightforward. When used in this context, the mutex is used in the main() function as follows:
 
-* Attempt to read the mutex. If the mutex does not exist then this is the first instance of the application.
+* Attempt to Create the mutex. 
+   * If the mutex does not exist then this is the first instance of the application.
+   *  If the mutex exist then terminate the second instance by returning from main().
 * Create the mutex if it does not already exist.
-* Release the mutex after Application->Run() returns. This only happens when the application closes.
-* If the mutex exists then this is a second instance of the application. Terminate the second instance by returning from main().
+* Release the mutex before returns. This only happens when the application closes.
+* close Pointer (HANDLE/void*)
 
 The following code is the simplest main() that can be written given the above steps:
 
