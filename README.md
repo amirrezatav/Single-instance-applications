@@ -9,7 +9,6 @@ Using a mutex is relatively straightforward. When used in this context, the mute
 * Attempt to Create the mutex. 
    * If the mutex does not exist then this is the first instance of the application.
    *  If the mutex exist then terminate the second instance by returning from main().
-* Create the mutex if it does not already exist.
 * Release the mutex before returns. This only happens when the application closes.
 * close Pointer (HANDLE/void*)
 
