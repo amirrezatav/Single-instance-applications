@@ -26,8 +26,8 @@ The following code is the simplest main() that can be written given the above st
                 // TRUE : the caller created the mutex Calling thread obtains ownership of the mutex object.
                 // FALSE : Calling thread does not obtain ownership of the mutex.
         L"MutexName"
-        ); //  [CreateMutex Fintion](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexa)
-        // Nonzero indicates success. Zero indicates failure. To get extended error information, call [GetLastError Function](https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+        ); 
+        // Nonzero indicates success. Zero indicates failure. To get extended error information, call GetLastError
 
         if (GetLastError() == ERROR_ALREADY_EXISTS) 
             return 0;
@@ -39,3 +39,6 @@ The following code is the simplest main() that can be written given the above st
         CloseHandle(hMutexHandle);
         return 0;
     }
+ 
+ [CreateMutex Fintion](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexa)
+ [GetLastError Function](https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
