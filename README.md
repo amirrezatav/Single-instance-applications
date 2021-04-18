@@ -1,4 +1,4 @@
-# Single-instance applications
+# Single instance applications
 Some applications are built to allow users to run as many instances of the application as the user desires. Other applications allow only a single instance of the application to be run.
 
 ## Using a mutex
