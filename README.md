@@ -13,7 +13,7 @@ Using a mutex is relatively straightforward. When used in this context, the mute
 * close Pointer (HANDLE/void*)
 
 The following code is the simplest main() that can be written given the above steps:
-
+```cpp
     #include <windows.h>
 
     int main(int argc, char* argv[])
@@ -38,6 +38,6 @@ The following code is the simplest main() that can be written given the above st
         CloseHandle(hMutexHandle);
         return 0;
     }
- 
+ ```
 * [CreateMutex Function](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexa)
 * [GetLastError Function](https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
